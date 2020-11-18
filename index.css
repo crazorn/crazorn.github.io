@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px; /* height of your footer */
+
+    background-image: linear-gradient(to bottom, beige, rgb(252, 218, 160));
+}
+
+.header {
+    text-align: center;
+    font-family: cursive;
+}
+
+.header h1{
+    font-size: 38pt;
+}
+
+.navigation {
+    text-align: center;
+    background-color: darkgoldenrod;
+    padding: 15px;
+    margin: 15px;
+}
+
+.navigation a{
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 14pt;
+}
+
+
+.navigation a:hover {
+    color: gray;
+    background-color: #ddd;
+}
+
+.navigation a.active {
+    color:orange;
+}
+
+.body {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    
+    height: 100%;
+    position: relative;
+}
+
+.footer {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+}
+
+
+.column img{
+    height: auto;
+    width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.column {
+    float: left;
+    width: calc(100% / 3 - 50px);
+    margin: 25px;
+}
+
+.column h2 {
+    font-size: 24pt;
+    text-align: center;
+    font-family: cursive;
+}
+
+.column p{
+    color: black;
+    padding: 5px;
+}
+
+#titlepic {
+    height: auto;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
