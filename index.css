@@ -3,6 +3,7 @@
 }
 
 .page {
+    margin: 0;
     min-height: 100vh;
     /* will cover the 100% of viewport */
     overflow: hidden;
@@ -28,7 +29,7 @@
 
 .navigation {
     text-align: center;
-    background-color: darkgoldenrod;
+    background-color: white;
     padding: 5px;
     margin: 15px;
     overflow: hidden;

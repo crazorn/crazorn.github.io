@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="index.css">    
+    <link rel="stylesheet" href="index.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <div class="page">
@@ -17,7 +18,22 @@
         <a href="distancebeuth.html">Distance to Beuth</a>
         <a href="team.html">Team</a>
         <a href="contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
+
+    <script>
+        /*Responsive top navigation nach https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -- noch nicht sicher ob das wirklich nötig ist... Sieht sehr legacy aus.*/
+        function myFunction() {
+            var x = document.getElementById("navigation");
+            if (x.className === "navigation") {
+                x.className += " responsive";
+            } else {
+                x.className = "navigation";
+            }
+        }
+    </script>
     
     <div class="body">
         <div class="room">
