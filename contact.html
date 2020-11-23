@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="common.css">    
+    <link rel="stylesheet" href="common.css"> 
+    <link rel="stylesheet" href="contact.css">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -40,23 +41,56 @@
         <h2>Contact us:</h2>
         
         <form action="">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" required>
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div> 
+                <div class="col-75">
+                    <input type="text" id="fname" required>
+                </div>   
+            </div>
             
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" required>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div> 
+                <div class="col-75">
+                    <input type="text" id="lname" required>
+                </div>   
+            </div>
             
-            <label for="email">Email</label>
-            <input type="email" id="email" required>
-    
-            <label for="telnr">Tel. number</label>
-            <input type="tel" id="telnr">
-    
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" required>
-    
-            <textarea id="message" cols="90" rows="20" required></textarea>
-            <input type="submit" value="Send">
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email</label>
+                </div> 
+                <div class="col-75">
+                    <input type="email" id="email" required>
+                </div>   
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="telnr">Tel. number</label>
+                </div> 
+                <div class="col-75">
+                    <input type="tel" id="telnr">
+                </div>   
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Subject</label>
+                </div> 
+                <div class="col-75">
+                    <input type="text" id="subject" required>
+                </div>   
+            </div>
+            <div class="row">
+                <textarea id="message" cols="90" rows="20" required></textarea>
+            </div>
+            <div class="row">
+                <input type="submit" value="Send">
+            </div>
         </form>
     </div>
     
