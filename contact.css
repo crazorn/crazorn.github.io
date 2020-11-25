@@ -1,9 +1,38 @@
-input[type=text], textarea {
+input[type=text], input[type=email], input[type=tel], textarea {
 	width: 100%;
 	padding: 12px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	resize: vertical;
+}
+
+input[type=submit], textarea {
+	margin-top: 6px;
+}
+
+.col-25 {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+}
+
+.col-75 {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 1200px) {
+	.col-25, .col-75, input[type=submit] {
+		width: 100%;
+		margin-top: 0;
+	}
 }
 
 label {
@@ -40,6 +69,7 @@ input[type=submit]:hover {
 	text-align: center;
 	text-decoration: none;
 	margin: 5px 2px;
+	border-radius: 4px;
 }
 
 .fa:hover {
