@@ -1,31 +1,62 @@
 input[type=text], textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
-  
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: vertical;
+}
+
 label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
+	padding: 12px 12px 12px 0;
+	display: inline-block;
 }
 
 input[type=submit] {
-    background-color: gray;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    float: right;
-  }
+	background-color: gray;
+	padding: 12px 20px;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	float: right;
+}
 
 input[type=submit]:hover {
-    background-color:darkgray;
+	background-color: darkgray;
 }
 
 .body {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+
+#socialmedia {
+	font-size: 30px;
+}
+
+.fa {
+	padding: 20px;
+	width: 80px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+}
+
+.fa:hover {
+	opacity: 0.7;
+}
+
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+
+.fa-youtube {
+	background: #bb0000;
+	color: white;
+}
+
+.fa-instagram {
+	background: #125688;
+	color: white;
 }
