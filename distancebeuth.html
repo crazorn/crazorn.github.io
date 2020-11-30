@@ -2,6 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="distancetobeuth.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8" />
 
@@ -36,7 +37,7 @@
 
         if ("geolocation" in navigator) {
             // maybe switch to watchPosition - need to stop map reload.
-            navigator.geolocation.wa(function updatePosition(position) {
+            navigator.geolocation.getCurrentPosition(function updatePosition(position) {
                 var position_p = document.getElementById("position");
                 position_p.innerText = "Your latitude: " + position.coords.latitude.toPrecision(9).toString() + "°";
                 position_p.innerText += ", Your longitude: " + position.coords.longitude.toPrecision(9).toString() + "°";
@@ -96,7 +97,7 @@
         <p id="position"></p>
         <p id="distance"></p>
 
-        <div id="googleMap" style="width:100%;height:400px;"></div>
+        <div id="googleMap"></div>
 
     </div>
 
