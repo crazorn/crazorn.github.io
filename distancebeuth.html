@@ -4,49 +4,61 @@
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8" />
+
+    <script src="https://maps.googleapis.com/maps/api/js?" defer></script>
+
     <script>
-        
+
         function degreeToRadians(degrees) {
             return degrees * Math.PI / 180.0;
         }
-        
+
         function calculateDistance(lon1, lat1, lon2, lat2) {
             const r2d = Math.PI / 180.0;
             const earthRadiusKm = 6371;
             var dLat = degreeToRadians(lat2 - lat1);
             var dLon = degreeToRadians(lon2 - lon1);
-            
+
             var lat1 = degreeToRadians(lat1);
             var lat2 = degreeToRadians(lat2);
 
-            var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
-                Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
-            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
             return earthRadiusKm * c; // in km
         }
 
         function getDistanceToBeuth(lon, lat) {
             const beuthLat = 52.5451619306425;
-            const beuthLon =  13.351617269753293;
-            return calculateDistance(lon, lat, beuthLon, beuthLat);  
+            const beuthLon = 13.351617269753293;
+            return calculateDistance(lon, lat, beuthLon, beuthLat);
         }
-        
+
         if ("geolocation" in navigator) {
-            navigator.geolocation.watchPosition(function updatePosition(position) {
+            // maybe switch to watchPosition - need to stop map reload.
+            navigator.geolocation.wa(function updatePosition(position) {
                 var position_p = document.getElementById("position");
                 position_p.innerText = "Your latitude: " + position.coords.latitude.toPrecision(9).toString() + "°";
                 position_p.innerText += ", Your longitude: " + position.coords.longitude.toPrecision(9).toString() + "°";
                 position_p.innerText += ", Accuarcy: " + position.coords.accuracy + " m";
                 var distance_p = document.getElementById("distance");
                 distance_p.innerText = "Distance to beuth: " + getDistanceToBeuth(position.coords.longitude, position.coords.latitude).toPrecision(4).toString() + " km";
-                console.log("Position updated");
+
+                var mapProp = {
+                    center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+                    zoom: 15,
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                new google.maps.Marker({
+                    position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+                    map,
+                });
             });
         }
         else {
             alert("geolocation is missing!");
         }
 
-        
     </script>
 </head>
 
@@ -83,10 +95,8 @@
     <div class="body">
         <p id="position"></p>
         <p id="distance"></p>
-        
-        <div> 
-            <!-- Google Map Copied Code -->
-        </div> 
+
+        <div id="googleMap" style="width:100%;height:400px;"></div>
 
     </div>
 
