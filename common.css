@@ -46,11 +46,11 @@
 
 .navigation a:hover {
     color: gray;
-    background-color: #ddd;
+    background-color: rgb(240, 240, 240);
 }
 
 .navigation a.active {
-    color: orange;
+    color: darkorange;
 }
 
 /*Responsive top nav nach w3school.com (für url siehe .html)*/
