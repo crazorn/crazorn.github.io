@@ -1,0 +1,35 @@
+.room {
+    display: flex;    
+    padding: 10px;
+    margin-top: 25px;
+    border: solid black;
+    border-width: 1px;
+}
+
+[class^="column"] {
+    margin: 15px;
+} 
+
+.column70 {
+    width: 70%;
+}
+
+.column30 {
+    width: 30%;
+}
+
+.room h2{
+    margin-top: 0px;
+}
+
+.room img{
+    width: 100%;
+}
+ 
+.price-right {
+    text-align: right;
+}
+
+[id^="details"]{
+    visibility: hidden;
+}
