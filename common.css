@@ -37,11 +37,11 @@
 
 .navigation a {
     padding: 15px;
+    padding-left: 60px;
     color: black;
     text-decoration: none;
     font-size: 14pt;
-    float: left;
-    display: block;
+    display: inline-block;
 }
 
 .navigation a:hover {
@@ -53,13 +53,20 @@
 }
 
 /*Responsive top nav nach w3school.com (für url siehe .html)*/
+
 @media screen and (max-width: 1240px) {
     .navigation a:not(:first-child) {
         display: none;
     }
+    .navigation a:first-child {
+        float: left;
+    }
     .navigation a.icon {
         float: right;
         display: block;
+    }
+    .navigation a {
+        padding-left: 15px;
     }
 }
 
