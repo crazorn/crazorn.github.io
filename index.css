@@ -5,12 +5,14 @@
     display: block;
 }
 
+.perks {
+    display: flex;
+}
+
 .column {
-    float: left;
     width: calc(100% / 3 - 50px);
     margin: 25px;
 }
-/* TODO at certain  point just put every element underneath each other */
 
 .column h2 {
     font-size: 24pt;
@@ -20,6 +22,16 @@
 .column p {
     color: black;
     padding: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .perks {
+        display: block;
+    }
+
+    [class^="column"] {
+        width: 95%;
+    }
 }
 
 #titlepic {

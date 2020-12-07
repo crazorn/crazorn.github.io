@@ -7,6 +7,14 @@
     display: flex;
 }
 
+.column30 {
+    width: 30%;
+}
+
+.column70 {
+    width: 70%;
+}
+
 .person div{
     margin: 5px;
 }
@@ -18,9 +26,13 @@
 }
 
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 600px) {
     .person {
         display: block;
+    }
+
+    .person img {
+        width: 95%;
     }
 
     [class^="column"] {
