@@ -33,6 +33,15 @@
         width: 95%;
         margin: 0px;
     }
+
+
+    #titlepic {
+        width: 100%;
+    }
+}
+
+#welcome {
+    text-align: center;
 }
 
 #titlepic {
