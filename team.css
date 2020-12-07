@@ -31,10 +31,6 @@
         display: block;
     }
 
-    .person img {
-        width: 95%;
-    }
-
     [class^="column"] {
         width: 95%;
     }

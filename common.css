@@ -14,7 +14,7 @@
     background-image: linear-gradient(to bottom, beige, rgb(252, 218, 160));
 }
 
-p,a,h2,h3,li {
+p, a, h2, h3, li {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -24,7 +24,7 @@ p,a,h2,h3,li {
     font-style: italic;
 }
 
-.header h1 { 
+.header h1 {
     font-size: 38pt;
 }
 
@@ -56,8 +56,6 @@ p,a,h2,h3,li {
 .navigation a.active {
     color: darkorange;
 }
-
-/*Responsive top nav nach w3school.com (für url siehe .html)*/
 
 @media screen and (max-width: 1240px) {
     .navigation a:not(:first-child) {

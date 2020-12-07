@@ -29,6 +29,7 @@ h2 {
 
     [class^="column"] {
         width: 95%;
+        margin: auto;
     }
 }
 
