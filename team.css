@@ -16,3 +16,14 @@
     height: auto;
     display: block;
 }
+
+
+@media screen and (max-width: 1240px) {
+    .person {
+        display: block;
+    }
+
+    [class^="column"] {
+        width: 95%;
+    }
+}
