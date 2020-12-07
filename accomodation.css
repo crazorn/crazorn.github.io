@@ -22,6 +22,16 @@ h2 {
     width: 30%;
 }
 
+@media screen and (max-width: 1240px) {
+    .room {
+        display: block;
+    }
+
+    [class^="column"] {
+        width: 95%;
+    }
+}
+
 .room h2{
     margin-top: 0px;
 }
