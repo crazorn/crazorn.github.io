@@ -6,6 +6,10 @@
     border-width: 1px;
 }
 
+h2 {
+    font-style: italic;
+}
+
 [class^="column"] {
     margin: 15px;
 } 
@@ -31,5 +35,5 @@
 }
 
 [id^="details"]{
-    visibility: hidden;
+    display: none;
 }

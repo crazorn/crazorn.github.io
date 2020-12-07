@@ -14,7 +14,7 @@
     background-image: linear-gradient(to bottom, beige, rgb(252, 218, 160));
 }
 
-p,a {
+p,a,h2,h3 {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -71,7 +71,7 @@ p,a {
         display: block;
     }
     .navigation a {
-        padding-left: 15px;
+        margin-left: 10px;
     }
 }
 
