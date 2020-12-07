@@ -1,91 +1,92 @@
 <!DOCTYPE html>
-
-<head>
-    <title>Team overview</title>
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="team.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8" />
-</head>
-
-<div class="page">
-
-    <div class="header">
-        <h1>Hotel Cicero</h1>
-        <p>Best hotel in the world.</p>
-    </div>
-
-    <div class="navigation" id="navigation">
-        <a href="index.html">Home</a>
-        <a href="accomodation.html">Accomodation</a>
-        <a href="distancebeuth.html">Distance to Beuth</a>
-        <a href="#" class="active">Team</a>
-        <a href="contact.html">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-    <script>
-        /*Responsive top navigation nach https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
-        function myFunction() {
-            var x = document.getElementById("navigation");
-            if (x.className === "navigation") {
-                x.className += " responsive";
-            } else {
-                x.className = "navigation";
+<html lang="en">
+    <head>
+        <title>Team overview</title>
+        <link rel="stylesheet" href="common.css">
+        <link rel="stylesheet" href="team.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="utf-8" />
+    </head>
+    
+    <div class="page">
+    
+        <div class="header">
+            <h1>Hotel Cicero</h1>
+            <p>Best hotel in the world.</p>
+        </div>
+    
+        <div class="navigation" id="navigation">
+            <a href="index.html">Home</a>
+            <a href="accomodation.html">Accomodation</a>
+            <a href="distancebeuth.html">Distance to Beuth</a>
+            <a href="#" class="active">Team</a>
+            <a href="contact.html">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <script>
+            /*Responsive top navigation nach https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+            function myFunction() {
+                var x = document.getElementById("navigation");
+                if (x.className === "navigation") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navigation";
+                }
             }
-        }
-    </script>
-
-    <div class="body">
-        <h2>Our Team</h2>
-        <div class="person">
-            <div class="column">
-                <img src="pictures/personA.jpg" alt="Person1">
+        </script>
+    
+        <div class="body">
+            <h2>Our Team</h2>
+            <div class="person">
+                <div class="column">
+                    <img src="pictures/personA.jpg" alt="Person1">
+                </div>
+                <div class="column">
+                    <h3>John Doe</h3>
+                    <p>Hotel manager</p>
+                    <p>tel: +12 3456 78901</p>
+                    <p>email: <a href="mailto:abc@example.com">abc@example.com</a></p>
+                </div>
             </div>
-            <div class="column">
-                <h3>John Doe</h3>
-                <p>Hotel manager</p>
-                <p>tel: +12 3456 78901</p>
-                <p>email: <a href="mailto:abc@example.com">abc@example.com</a></p>
+            <div class="person">
+                <div class="column">
+                    <img src="pictures/personB.jpg" alt="Person2">
+                </div>
+                <div class="column">
+                    <h3>Johanna Doe</h3>
+                    <p>Executive chef</p>
+                    <p>tel: +12 3456 78901</p>
+                    <p>email: <a href="mailto:abc@example.com">abc@example.com</a></p>
+                </div>
+            </div>
+            <div class="person">
+                <div class="column">
+                    <img src="pictures/personC.jpg" alt="Person3">
+                </div>
+                <div class="column">
+                    <h3>Jonathan Doe</h3>
+                    <p>Human resourcess</p>
+                    <p>tel: +12 3456 78901</p>
+                    <p>email: <a href="mailto:abc@example.com">abc@example.com</a></p>
+                </div>
+            </div>
+            <div class="person">
+                <div class="column">
+                    <img src="pictures/personD.jpg" alt="Person4">
+                </div>
+                <div class="column">
+                    <h3>Jonas Doe</h3>
+                    <p>Reservation service</p>
+                    <p>tel: +12 3456 78901</p>
+                    <p>email: <a href="mailto:abc@example.com">abc@example.com</a></p>
+                </div>
             </div>
         </div>
-        <div class="person">
-            <div class="column">
-                <img src="pictures/personB.jpg" alt="Person2">
-            </div>
-            <div class="column">
-                <h3>Johanna Doe</h3>
-                <p>Executive chef</p>
-                <p>tel: +12 3456 78901</p>
-                <p>email: <a href="mailto:abc@example.com">abc@example.com</a></p>
-            </div>
-        </div>
-        <div class="person">
-            <div class="column">
-                <img src="pictures/personC.jpg" alt="Person3">
-            </div>
-            <div class="column">
-                <h3>Jonathan Doe</h3>
-                <p>Human resourcess</p>
-                <p>tel: +12 3456 78901</p>
-                <p>email: <a href="mailto:abc@example.com">abc@example.com</a></p>
-            </div>
-        </div>
-        <div class="person">
-            <div class="column">
-                <img src="pictures/personD.jpg" alt="Person4">
-            </div>
-            <div class="column">
-                <h3>Jonas Doe</h3>
-                <p>Reservation service</p>
-                <p>tel: +12 3456 78901</p>
-                <p>email: <a href="mailto:abc@example.com">abc@example.com</a></p>
-            </div>
+    
+        <div class="footer">
+            <p>Hotel Cicero, 231 Musterstraße, 12345 Musterhausen</p>
         </div>
     </div>
-
-    <div class="footer">
-        <p>Hotel Cicero, 231 Musterstraße, 12345 Musterhausen</p>
-    </div>
-</div>
+</html>

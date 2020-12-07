@@ -1,159 +1,161 @@
 <!DOCTYPE html>
 
-<head>
-    <title>Accomodation overwiew</title>
-    <link rel="stylesheet" href="common.css"> 
-    <link rel="stylesheet" href="accomodation.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8" />
-
-    <script>
-        function showDetails(targetId) {
-            var listnode = document.getElementById(targetId);
-            if(listnode.style.visibility == "visible") {
-                listnode.style.visibility = "hidden";
-
-            }
-            else {
-                listnode.style.visibility = "visible";
-            }
-        }
-    </script>
-</head>
-
-<div class="page">
-
-    <div class="header">
-        <h1>Hotel Cicero</h1>
-        <p>Best hotel in the world.</p>
-    </div>
+<html lang="en">
+    <head>
+        <title>Accomodation overwiew</title>
+        <link rel="stylesheet" href="common.css"> 
+        <link rel="stylesheet" href="accomodation.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="utf-8" />
     
-    <div class="navigation" id="navigation">
-        <a href="index.html">Home</a>
-        <a href="#" class="active">Accomodation</a>
-        <a href="distancebeuth.html">Distance to Beuth</a>
-        <a href="team.html">Team</a>
-        <a href="contact.html">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-
-    <script>
-        /*Responsive top navigation nach https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
-        function myFunction() {
-            var x = document.getElementById("navigation");
-            if (x.className === "navigation") {
-                x.className += " responsive";
-            } else {
-                x.className = "navigation";
+        <script>
+            function showDetails(targetId) {
+                var listnode = document.getElementById(targetId);
+                if(listnode.style.visibility == "visible") {
+                    listnode.style.visibility = "hidden";
+    
+                }
+                else {
+                    listnode.style.visibility = "visible";
+                }
             }
-        }
-    </script>
+        </script>
+    </head>
     
-    <div class="body">
-
-        <div id="reservation"></div>
-
-        <div class="room">
-            <div class="column30">
-                <img src="pictures/single.jpg" alt="roomS">
+    <div class="page">
+    
+        <div class="header">
+            <h1>Hotel Cicero</h1>
+            <p>Best hotel in the world.</p>
+        </div>
+        
+        <div class="navigation" id="navigation">
+            <a href="index.html">Home</a>
+            <a href="#" class="active">Accomodation</a>
+            <a href="distancebeuth.html">Distance to Beuth</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    
+        <script>
+            /*Responsive top navigation nach https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+            function myFunction() {
+                var x = document.getElementById("navigation");
+                if (x.className === "navigation") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navigation";
+                }
+            }
+        </script>
+        
+        <div class="body">
+    
+            <div id="reservation"></div>
+    
+            <div class="room">
+                <div class="column30">
+                    <img src="pictures/single.jpg" alt="roomS">
+                </div>
+                <div class="column70">
+                    <h2>Single bedroom</h2>
+                    <h3>Room details</h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                    <input type="button" value="Details" onclick="showDetails('details1');">
+                    <ul id="details1">
+                        <li>Wifi</li>
+                        <li>Bathroom</li>
+                        <li>25 m²</li>
+                        <li>Lorem</li>
+                    </ul>
+                    <h3 class="price-right">Starting at $43 / Night</h3>
+                </div>
             </div>
-            <div class="column70">
-                <h2>Single bedroom</h2>
-                <h3>Room details</h3>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
-                <input type="button" value="Details" onclick="showDetails('details1');">
-                <ul id="details1">
-                    <li>Wifi</li>
-                    <li>Bathroom</li>
-                    <li>25 m²</li>
-                    <li>Lorem</li>
-                </ul>
-                <h3 class="price-right">Starting at $43 / Night</h3>
+            <div class="room">
+                <div class="column70">
+                    <h2>Double bedroom</h2>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                    <input type="button" value="Details" onclick="showDetails('details2')">
+                    <ul id="details2">
+                        <li>Wifi</li>
+                        <li>Bathroom</li>
+                        <li>32 m²</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                    </ul>
+                    <h3 class="price">Starting at $71 / Night</h3>
+                </div>
+                <div class="column30">
+                    <img src="pictures/double.jpg" alt="roomA">                
+                </div>
+            </div>
+            <div class="room">
+                <div class="column30">
+                    <img src="pictures/doubledeluxe.jpg" alt="roomB">                
+                </div>
+                <div class="column70">
+                    <h2>Double deluxe</h2>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>                
+                    <input type="button" value="Details" onclick="showDetails('details3')">
+                    <ul id="details3">
+                        <li>Wifi</li>
+                        <li>Bathroom</li>
+                        <li>41 m²</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                    </ul>
+                    <h3 class="price-right">Starting at $82 / Night</h3>
+                </div>
+            </div>
+            <div class="room">
+                <div class="column70">
+                    <h2>Suite</h2>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>                
+                    <input type="button" value="Details" onclick="showDetails('details4')">
+                    <ul id="details4">
+                        <li>Wifi</li>
+                        <li>Bathroom</li>
+                        <li>60 m²</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                    </ul>
+                    <h3 class="price">Starting at $96 / Night</h3>
+                </div>
+                <div class="column30">
+                    <img src="pictures/suite.jpg" alt="roomC">                
+                </div>
+            </div>
+            <div class="room">
+                <div class="column30">
+                    <img src="pictures/presidentsuite.jpg" alt="roomD">                
+                </div>
+                <div class="column70">
+                    <h2>President suite</h2>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>                
+                    <input type="button" value="Details" onclick="showDetails('details5')">
+                    <ul id="details5">
+                        <li>Wifi</li>
+                        <li>2 Bathrooms</li>
+                        <li>125 m²</li>
+                        <li>Frigde</li>
+                        <li>Pool</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                        <li>Lorem</li>
+                    </ul>
+                    <h3 class="price-right">Starting at $172/ Night</h3>
+                </div>
             </div>
         </div>
-        <div class="room">
-            <div class="column70">
-                <h2>Double bedroom</h2>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
-                <input type="button" value="Details" onclick="showDetails('details2')">
-                <ul id="details2">
-                    <li>Wifi</li>
-                    <li>Bathroom</li>
-                    <li>32 m²</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                </ul>
-                <h3 class="price">Starting at $71 / Night</h3>
-            </div>
-            <div class="column30">
-                <img src="pictures/double.jpg" alt="roomA">                
-            </div>
-        </div>
-        <div class="room">
-            <div class="column30">
-                <img src="pictures/doubledeluxe.jpg" alt="roomB">                
-            </div>
-            <div class="column70">
-                <h2>Double deluxe</h2>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>                
-                <input type="button" value="Details" onclick="showDetails('details3')">
-                <ul id="details3">
-                    <li>Wifi</li>
-                    <li>Bathroom</li>
-                    <li>41 m²</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                </ul>
-                <h3 class="price-right">Starting at $82 / Night</h3>
-            </div>
-        </div>
-        <div class="room">
-            <div class="column70">
-                <h2>Suite</h2>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>                
-                <input type="button" value="Details" onclick="showDetails('details4')">
-                <ul id="details4">
-                    <li>Wifi</li>
-                    <li>Bathroom</li>
-                    <li>60 m²</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                </ul>
-                <h3 class="price">Starting at $96 / Night</h3>
-            </div>
-            <div class="column30">
-                <img src="pictures/suite.jpg" alt="roomC">                
-            </div>
-        </div>
-        <div class="room">
-            <div class="column30">
-                <img src="pictures/presidentsuite.jpg" alt="roomD">                
-            </div>
-            <div class="column70">
-                <h2>President suite</h2>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>                
-                <input type="button" value="Details" onclick="showDetails('details5')">
-                <ul id="details5">
-                    <li>Wifi</li>
-                    <li>2 Bathrooms</li>
-                    <li>125 m²</li>
-                    <li>Frigde</li>
-                    <li>Pool</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                </ul>
-                <h3 class="price-right">Starting at $172/ Night</h3>
-            </div>
+        
+        <div class="footer">
+            <p>Hotel Cicero, 231 Musterstraße, 12345 Musterhausen</p>
         </div>
     </div>
-    
-    <div class="footer">
-        <p>Hotel Cicero, 231 Musterstraße, 12345 Musterhausen</p>
-    </div>
-</div>
+</html>

@@ -1,77 +1,79 @@
 <!DOCTYPE html>
 
-<head>
-    <title>Hotel Cicero Homepage</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8" />
-</head>
-
-
-
-<div class="page">
-
-    <div class="header">
-        <h1>Hotel Cicero</h1>
-        <p>Best hotel in the world.</p>
-    </div>
-
-    <div class="navigation" id="navigation">
-        <a href="#" class="active">Home</a>
-        <a href="accomodation.html">Accomodation</a>
-        <a href="distancebeuth.html">Distance to Beuth</a>
-        <a href="team.html">Team</a>
-        <a href="contact.html">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-
-    <script>
-        /*Responsive top navigation nach https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
-        function myFunction() {
-            var x = document.getElementById("navigation");
-            if (x.className === "navigation") {
-                x.className += " responsive";
-            } else {
-                x.className = "navigation";
+<html lang="en">
+    <head>
+        <title>Hotel Cicero Homepage</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="common.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="utf-8" />
+    </head>
+    
+    
+    
+    <div class="page">
+    
+        <div class="header">
+            <h1>Hotel Cicero</h1>
+            <p>Best hotel in the world.</p>
+        </div>
+    
+        <div class="navigation" id="navigation">
+            <a href="#" class="active">Home</a>
+            <a href="accomodation.html">Accomodation</a>
+            <a href="distancebeuth.html">Distance to Beuth</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    
+        <script>
+            /*Responsive top navigation nach https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+            function myFunction() {
+                var x = document.getElementById("navigation");
+                if (x.className === "navigation") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navigation";
+                }
             }
-        }
-    </script>
-
-    <div class="body">
-        <img id="titlepic" src="pictures/titlepic.jpg" alt="Titlepic">
-
-        <div class="row">
-            <div class="column">
-                <h2>Spa</h2>
-                <img src="pictures/spa.jpg" alt="Spa">
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
-            </div>
-            <div class="column">
-                <h2>Service</h2>
-                <img src="pictures/service.jpg" alt="Service">
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
-            </div>
-            <div class="column">
-                <h2>Restaurant</h2>
-                <img src="pictures/restaurant.jpg" alt="Restaurant">
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+        </script>
+    
+        <div class="body">
+            <img id="titlepic" src="pictures/titlepic.jpg" alt="Titlepic">
+    
+            <div class="row">
+                <div class="column">
+                    <h2>Spa</h2>
+                    <img src="pictures/spa.jpg" alt="Spa">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                </div>
+                <div class="column">
+                    <h2>Service</h2>
+                    <img src="pictures/service.jpg" alt="Service">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                </div>
+                <div class="column">
+                    <h2>Restaurant</h2>
+                    <img src="pictures/restaurant.jpg" alt="Restaurant">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                </div>
             </div>
         </div>
+    
+        <div class="footer">
+            <p>Hotel Cicero, 231 Musterstraße, 12345 Musterhausen</p>
+        </div>
     </div>
-
-    <div class="footer">
-        <p>Hotel Cicero, 231 Musterstraße, 12345 Musterhausen</p>
-    </div>
-</div>
+</html>
