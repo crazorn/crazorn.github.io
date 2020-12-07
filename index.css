@@ -10,6 +10,7 @@
     width: calc(100% / 3 - 50px);
     margin: 25px;
 }
+/* TODO at certain  point just put every element underneath each other */
 
 .column h2 {
     font-size: 24pt;
