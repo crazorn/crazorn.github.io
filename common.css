@@ -18,10 +18,12 @@ p, a, h2, h3, li {
     font-family: 'Open Sans', sans-serif;
 }
 
-.header {
+.header *{
     text-align: center;
     font-family: 'Playfair Display', cursive, serif;
     font-style: italic;
+    text-decoration: none;
+    color: black;
 }
 
 .header h1 {
