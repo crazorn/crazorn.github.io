@@ -41,7 +41,6 @@
             }
     
             if ("geolocation" in navigator) {
-                // maybe switch to watchPosition - need to stop map reload.
                 navigator.geolocation.getCurrentPosition(function updatePosition(position) {
                     var position_p = document.getElementById("position");
                     position_p.innerText = "Your latitude: " + position.coords.latitude.toPrecision(9).toString() + "°";
@@ -87,7 +86,7 @@
             </a>
         </div>
         <script>
-            /*Responsive top navigation nach https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+            
             function myFunction() {
                 var x = document.getElementById("navigation");
                 if (x.className === "navigation") {
