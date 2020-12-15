@@ -18,6 +18,10 @@ p, a, h2, h3, li {
     font-family: 'Open Sans', sans-serif;
 }
 
+form{
+    font-family: 'Open Sans', sans-serif;
+}
+
 .header *{
     text-align: center;
     font-family: 'Playfair Display', cursive, serif;

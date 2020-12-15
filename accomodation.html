@@ -70,43 +70,43 @@
                 <span class="close">&times;</span>
                 <h2>Reservation</h2>
             </div>
-            
+
             <form action="">
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-25">
                             <label for="fname">First Name</label>
-                        </div> 
+                        </div>
                         <div class="col-75">
                             <input type="text" id="fname" required>
-                        </div>   
+                        </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-25">
                             <label for="lname">Last Name</label>
-                        </div> 
+                        </div>
                         <div class="col-75">
                             <input type="text" id="lname" required>
-                        </div>   
+                        </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-25">
                             <label for="email">Email</label>
-                        </div> 
+                        </div>
                         <div class="col-75">
                             <input type="email" id="email" required>
-                        </div>   
+                        </div>
                     </div>
-        
+
                     <div class="row">
                         <div class="col-25">
                             <label for="telnr">Tel. number</label>
-                        </div> 
+                        </div>
                         <div class="col-75">
                             <input type="tel" id="telnr">
-                        </div>   
+                        </div>
                     </div>
 
                 </div>
@@ -117,7 +117,7 @@
                 </div>
             </form>
         </div>
-        <script>           
+        <script>
             var modal = document.getElementById("booking_modal");
 
             var span = document.getElementsByClassName("close")[0];
@@ -140,9 +140,9 @@
 
         <div id="reservation">
             <form id="_reservation">
-                <label for="arrival:">Arrival</label>
+                <label for="arrival">Arrival:</label>
                 <input type="date" name="arrival" id="arrival" onchange="setDepatureToArrival();" required>
-                <label for="depature:">Depature</label>
+                <label for="depature">Depature:</label>
                 <input type="date" name="depature" id="depature" required>
                 <input type="button" value="Check avalibility" onclick="confirmSelected();">
             </form>

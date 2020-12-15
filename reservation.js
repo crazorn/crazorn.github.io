@@ -1,4 +1,4 @@
-function showBookingDialog(ev){
+function showBookingDialog(ev) {
     //Auch hier sollten über das eventarg oder über das frühere Ajax request der Raum typ geholt werden. Wir gehene hier einfach davon aus das diese Informationen vorliegen und im POST mit gesendet werden. 
     var modal = document.getElementById("booking_modal");
     modal.style.display = "block";
@@ -45,11 +45,11 @@ function confirmSelected() {
     available_div.innerHTML = "";
     if (available.length != 0) {
         var delta_days = (d_date - a_date) / (1000 * 60 * 60 * 24);
-        
+
         var available_text = document.createElement("h2");
         available_text.innerText = "Availabile:";
         available_div.append(available_text);
-        
+
         available.forEach(element => {
             var container = document.createElement("div");
             container.classList.add("flex-box");

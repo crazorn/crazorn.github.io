@@ -68,50 +68,53 @@ input[type="button"] {
     display: none;
 }
 
-/* The Modal (background) */
+#reservation {
+    text-align: center;
+    border: solid black 1px;
+    padding-bottom: 10px;
+}
+
+#reservation input[type="button"] {
+    margin: auto;
+}
+
+#_reservation label {
+    margin-right: 0px;
+    padding-right: 0px;
+    margin-left: 20px;
+}
+
+#_reservation input[type="date"] {
+    margin-right: 20px;
+    padding-left: 0px;
+}
 
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
 }
-
-/* Modal Header */
 
 .modal-header {
     padding: 2px 16px;
     background-color: beige;
 }
 
-/* Modal Body */
-
 .modal-body {
     padding: 2px 16px;
 }
-
-/* Modal Footer */
 
 .modal-footer {
     padding: 2px 16px;
     background-color: beige;
 }
-
-/* Modal Content */
 
 .modal-content {
     position: relative;
@@ -124,8 +127,6 @@ input[type="button"] {
     animation-name: animatetop;
     animation-duration: 0.4s
 }
-
-/* Add Animation */
 
 @keyframes animatetop {
     from {
@@ -143,57 +144,57 @@ input[type="button"] {
 }
 
 input[type=text], input[type=email], input[type=tel], textarea {
-	width: 100%;
-	padding: 12px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	resize: vertical;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
 }
 
 input[type=submit], textarea {
-	margin-top: 6px;
+    margin-top: 6px;
 }
 
 .col-25 {
-	float: left;
-	width: 25%;
-	margin-top: 6px;
+    float: left;
+    width: 25%;
+    margin-top: 6px;
 }
 
 .col-75 {
-	float: left;
-	width: 75%;
-	margin-top: 6px;
+    float: left;
+    width: 75%;
+    margin-top: 6px;
 }
 
 .row:after {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 @media screen and (max-width: 1200px) {
-	.col-25, .col-75, input[type=submit] {
-		width: 100%;
-		margin-top: 0;
-	}
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
 }
 
 label {
-	padding: 12px 12px 12px 0;
-	display: inline-block;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
 }
 
 input[type=submit] {
     background-color: gray;
     margin-bottom: 10px;
-	padding: 12px 20px;
-	border: none;
-	cursor: pointer;
-	border-radius: 4px;
-	float: right;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    float: right;
 }
 
 input[type=submit]:hover {
-	background-color: darkgray;
+    background-color: darkgray;
 }
