@@ -1,176 +1,309 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <title>Hotel Cicero Accomodation</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="common.css"> 
-        <link rel="stylesheet" href="accomodation.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            function showDetails(targetId) {
-                var listnode = document.getElementById(targetId);
-                if(listnode.style.display == "inline") {
-                    listnode.style.display = "none";
-    
-                }
-                else {
-                    listnode.style.display = "inline";
-                }
+
+<head>
+    <title>Hotel Cicero Accomodation</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="accomodation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <script src="reservation.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function showDetails(targetId) {
+            var listnode = document.getElementById(targetId);
+            if (listnode.style.display == "inline") {
+                listnode.style.display = "none";
+
             }
-        </script>
-    </head>
-    
-    <div class="page">
-    
-        <div class="header">
-            <a href="index.html">
-                <h1>Hotel Cicero</h1>
-            </a>
-            <p>Best hotel in the world.</p>
-        </div>
-        
-        <div class="navigation" id="navigation">
-            <a href="index.html">Home</a>
-            <a href="#" class="active">Accomodation</a>
-            <a href="distancebeuth.html">Distance to Beuth</a>
-            <a href="team.html">Team</a>
-            <a href="contact.html">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    
-        <script>
+            else {
+                listnode.style.display = "inline";
+            }
+        }
+    </script>
+</head>
+
+<div class="page">
+
+    <div class="header">
+        <a href="index.html">
+            <h1>Hotel Cicero</h1>
+        </a>
+        <p>Best hotel in the world.</p>
+    </div>
+
+    <div class="navigation" id="navigation">
+        <a href="index.html">Home</a>
+        <a href="#" class="active">Accomodation</a>
+        <a href="distancebeuth.html">Distance to Beuth</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <script>
+
+        function myFunction() {
+            var x = document.getElementById("navigation");
+            if (x.className === "navigation") {
+                x.className += " responsive";
+            } else {
+                x.className = "navigation";
+            }
+        }
+    </script>
+
+
+    <div id="booking_modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Reservation</h2>
+            </div>
             
-            function myFunction() {
-                var x = document.getElementById("navigation");
-                if (x.className === "navigation") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "navigation";
+            <form action="">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">First Name</label>
+                        </div> 
+                        <div class="col-75">
+                            <input type="text" id="fname" required>
+                        </div>   
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Last Name</label>
+                        </div> 
+                        <div class="col-75">
+                            <input type="text" id="lname" required>
+                        </div>   
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="email">Email</label>
+                        </div> 
+                        <div class="col-75">
+                            <input type="email" id="email" required>
+                        </div>   
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="telnr">Tel. number</label>
+                        </div> 
+                        <div class="col-75">
+                            <input type="tel" id="telnr">
+                        </div>   
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <input type="submit" value="Send">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script>           
+            var modal = document.getElementById("booking_modal");
+
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
                 }
             }
         </script>
-        
-        <div class="body">
-    
-            <div id="reservation"></div>
-    
-            <div class="room">
-                <div class="column30">
-                    <img src="pictures/single.jpg" alt="roomS">
-                </div>
-                <div class="column70">
-                    <h2>Single bedroom</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
-                    <input type="button" value="Details" onclick="showDetails('details1');">
-                    <ul id="details1">
-                        <li>Wifi</li>
-                        <li>Bathroom</li>
-                        <li>25 m²</li>
-                        <li>Lorem</li>
-                    </ul>
-                    <br>
-                    <p class="price">Starting at </p>
-                    <h3 class="price">$43 / Night</h3>
-                </div>
+    </div>
+
+    <div class="body">
+
+        <div id="reservation">
+            <form id="_reservation">
+                <label for="arrival:">Arrival</label>
+                <input type="date" name="arrival" id="arrival" onchange="setDepatureToArrival();" required>
+                <label for="depature:">Depature</label>
+                <input type="date" name="depature" id="depature" required>
+                <input type="button" value="Check avalibility" onclick="confirmSelected();">
+            </form>
+            <div id="available"></div>
+            <script defer>
+                function setDateTodayDelta(node, delta) {
+                    var date = new Date();
+                    date.setDate(date.getDate() + delta);
+                    node.valueAsDate = date;
+                }
+
+                function padLeftZeros(string) {
+                    var s = String("00" + string).slice(-2);
+                    return s;
+                }
+
+                function setDepatureToArrival() {
+                    var arrival_node = document.getElementById("arrival");
+                    var date = arrival_node.valueAsDate;
+                    var min = date.getFullYear().toString() + "-" + padLeftZeros((date.getMonth() + 1).toString()) + "-" + padLeftZeros(date.getDate().toString());
+                    var depature_node = document.getElementById("depature");
+                    depature_node.setAttribute("min", min);
+                }
+
+                var arrival = document.getElementById("arrival");
+                var depature = document.getElementById("depature");
+                setDateTodayDelta(arrival, 0);
+                setDateTodayDelta(depature, 5);
+                var date = new Date();
+                var min = date.getFullYear().toString() + "-" + padLeftZeros((date.getMonth() + 1).toString()) + "-" + padLeftZeros(date.getDate().toString());
+                arrival.setAttribute("min", min);
+                depature.setAttribute("min", min);
+            </script>
+        </div>
+
+
+        <div class="room">
+            <div class="column30">
+                <img src="pictures/single.jpg" alt="roomS">
             </div>
-            <div class="room">
-                <div class="column30">
-                    <img src="pictures/double.jpg" alt="roomA">                
-                </div>
-                <div class="column70">
-                    <h2>Double bedroom</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
-                    <input type="button" value="Details" onclick="showDetails('details2')">
-                    <ul id="details2">
-                        <li>Wifi</li>
-                        <li>Bathroom</li>
-                        <li>32 m²</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                    </ul>
-                    <br>
-                    <p class="price">Starting at </p>
-                    <h3 class="price">$71 / Night</h3>
-                </div>
-            </div>
-            <div class="room">
-                <div class="column30">
-                    <img src="pictures/doubledeluxe.jpg" alt="roomB">                
-                </div>
-                <div class="column70">
-                    <h2>Double deluxe</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>                
-                    <input type="button" value="Details" onclick="showDetails('details3')">
-                    <ul id="details3">
-                        <li>Wifi</li>
-                        <li>Bathroom</li>
-                        <li>41 m²</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                    </ul>
-                    <br>
-                    <p class="price" >Starting at </p>
-                    <h3 class="price">$82 / Night</h3>
-                </div>
-            </div>
-            <div class="room">
-                <div class="column30">
-                    <img src="pictures/suite.jpg" alt="roomC">                
-                </div>
-                <div class="column70">
-                    <h2>Suite</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>                
-                    <input type="button" value="Details" onclick="showDetails('details4')">
-                    <ul id="details4">
-                        <li>Wifi</li>
-                        <li>Bathroom</li>
-                        <li>60 m²</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                    </ul>
-                    <br>
-                    <p class="price">Starting at </p>
-                    <h3 class="price">$96 / Night</h3>
-                </div>
-            </div>
-            <div class="room">
-                <div class="column30">
-                    <img src="pictures/presidentsuite.jpg" alt="roomD">                
-                </div>
-                <div class="column70">
-                    <h2>President suite</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>                
-                    <input type="button" value="Details" onclick="showDetails('details5')">
-                    <ul id="details5">
-                        <li>Wifi</li>
-                        <li>2 Bathrooms</li>
-                        <li>125 m²</li>
-                        <li>Frigde</li>
-                        <li>Pool</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                    </ul>
-                    <br>
-                    <p class="price">Starting at </p>
-                    <h3 class="price">$172/ Night</h3>
-                </div>
+            <div class="column70">
+                <h2>Single bedroom</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                <input type="button" value="Details" onclick="showDetails('details1');">
+                <ul id="details1">
+                    <li>Wifi</li>
+                    <li>Bathroom</li>
+                    <li>25 m²</li>
+                    <li>Lorem</li>
+                </ul>
+                <br>
+                <p class="price">Starting at </p>
+                <h3 class="price">$43 / Night</h3>
             </div>
         </div>
-        
-        <div class="footer">
-            <p>Hotel Cicero, 231 Musterstraße, 12345 Musterhausen</p>
+        <div class="room">
+            <div class="column30">
+                <img src="pictures/double.jpg" alt="roomA">
+            </div>
+            <div class="column70">
+                <h2>Double bedroom</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                <input type="button" value="Details" onclick="showDetails('details2')">
+                <ul id="details2">
+                    <li>Wifi</li>
+                    <li>Bathroom</li>
+                    <li>32 m²</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                </ul>
+                <br>
+                <p class="price">Starting at </p>
+                <h3 class="price">$71 / Night</h3>
+            </div>
+        </div>
+        <div class="room">
+            <div class="column30">
+                <img src="pictures/doubledeluxe.jpg" alt="roomB">
+            </div>
+            <div class="column70">
+                <h2>Double deluxe</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                <input type="button" value="Details" onclick="showDetails('details3')">
+                <ul id="details3">
+                    <li>Wifi</li>
+                    <li>Bathroom</li>
+                    <li>41 m²</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                </ul>
+                <br>
+                <p class="price">Starting at </p>
+                <h3 class="price">$82 / Night</h3>
+            </div>
+        </div>
+        <div class="room">
+            <div class="column30">
+                <img src="pictures/suite.jpg" alt="roomC">
+            </div>
+            <div class="column70">
+                <h2>Suite</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                <input type="button" value="Details" onclick="showDetails('details4')">
+                <ul id="details4">
+                    <li>Wifi</li>
+                    <li>Bathroom</li>
+                    <li>60 m²</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                </ul>
+                <br>
+                <p class="price">Starting at </p>
+                <h3 class="price">$96 / Night</h3>
+            </div>
+        </div>
+        <div class="room">
+            <div class="column30">
+                <img src="pictures/presidentsuite.jpg" alt="roomD">
+            </div>
+            <div class="column70">
+                <h2>President suite</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                <input type="button" value="Details" onclick="showDetails('details5')">
+                <ul id="details5">
+                    <li>Wifi</li>
+                    <li>2 Bathrooms</li>
+                    <li>125 m²</li>
+                    <li>Frigde</li>
+                    <li>Pool</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                </ul>
+                <br>
+                <p class="price">Starting at </p>
+                <h3 class="price">$172/ Night</h3>
+            </div>
         </div>
     </div>
+
+    <div class="footer">
+        <p>Hotel Cicero, 231 Musterstraße, 12345 Musterhausen</p>
+    </div>
+</div>
+
 </html>

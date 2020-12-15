@@ -1,18 +1,26 @@
 .room {
-    display: flex;    
+    display: flex;
     padding: 10px;
     margin-top: 25px;
     border: solid black;
     border-width: 1px;
 }
 
-h2 {
+.flex-box {
+    display: flex;
+}
+
+.flex-box * {
+    margin: 15px;
+}
+
+h2, h3 {
     font-style: italic;
 }
 
 [class^="column"] {
     margin: 15px;
-} 
+}
 
 .column70 {
     width: 70%;
@@ -30,18 +38,17 @@ li {
     .room {
         display: block;
     }
-
     [class^="column"] {
         width: 95%;
         margin: auto;
     }
 }
 
-.room h2{
+.room h2 {
     margin-top: 0px;
 }
 
-.room img{
+.room img {
     width: 100%;
 }
 
@@ -53,10 +60,140 @@ input[type="button"] {
     display: inline;
 }
 
-.price h3{
+.price h3 {
     font-weight: bold;
 }
 
-[id^="details"]{
+[id^="details"] {
     display: none;
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Header */
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: beige;
+}
+
+/* Modal Body */
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+/* Modal Footer */
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: beige;
+}
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close {
+    cursor: pointer;
+}
+
+input[type=text], input[type=email], input[type=tel], textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: vertical;
+}
+
+input[type=submit], textarea {
+	margin-top: 6px;
+}
+
+.col-25 {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+}
+
+.col-75 {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 1200px) {
+	.col-25, .col-75, input[type=submit] {
+		width: 100%;
+		margin-top: 0;
+	}
+}
+
+label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+
+input[type=submit] {
+    background-color: gray;
+    margin-bottom: 10px;
+	padding: 12px 20px;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	float: right;
+}
+
+input[type=submit]:hover {
+	background-color: darkgray;
 }
