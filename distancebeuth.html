@@ -45,7 +45,7 @@
                     var position_p = document.getElementById("position");
                     position_p.innerText = "Your latitude: " + position.coords.latitude.toPrecision(9).toString() + "°,\n";
                     position_p.innerText += "Your longitude: " + position.coords.longitude.toPrecision(9).toString() + "°,\n";
-                    position_p.innerText += "Accuarcy: " + position.coords.accuracy.toFixed(2) + " m";
+                    position_p.innerText += "Accuracy: " + position.coords.accuracy.toFixed(2) + " m";
                     var distance_p = document.getElementById("distance");
                     distance_p.innerText = "Distance to beuth: " + getDistanceToBeuth(position.coords.longitude, position.coords.latitude).toPrecision(4).toString() + " km";
     
