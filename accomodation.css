@@ -8,10 +8,17 @@
 
 .flex-box {
     display: flex;
+    border: solid gray 1px;
+    margin: 5px;
 }
 
 .flex-box * {
     margin: 15px;
+}
+
+.flex-box input[type=button]{
+    margin-right: 5px;
+    margin-left: auto;
 }
 
 h2, h3 {
@@ -74,7 +81,11 @@ input[type="button"] {
     padding-bottom: 10px;
 }
 
-#reservation input[type="button"] {
+input[type=button]:hover{
+    opacity: 0.8;
+}
+
+#_reservation input[type="button"] {
     margin: auto;
 }
 
@@ -186,7 +197,7 @@ label {
 }
 
 input[type=submit] {
-    background-color: gray;
+    background-color: rgb(221, 221, 221);
     margin-bottom: 10px;
     padding: 12px 20px;
     border: none;
